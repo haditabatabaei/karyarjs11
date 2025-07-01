@@ -59,6 +59,9 @@ cars.length
 cars.push("benz")
 cars.toString()
 
+Array
+Object
+const str = "salam";
 
 // Boxing and UnBoxing - Box شدن - UnBox شدن
 
