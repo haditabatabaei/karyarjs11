@@ -122,6 +122,13 @@ let entries = Object.entries(car) // جمع entry ها -
 // ['name', 'pride'] // entry
 // ['countries', ['iran', 'usa'] ] // entry
 
+/*  
+    [
+        ['name', 'pride'],
+        ['countries', ['iran', 'usa'] ]
+    ]
+*/
+
 console.log(entries)
 
 for(let i = 0; i < entries.length; i++) {
@@ -184,6 +191,7 @@ function sum(op1, op2) {
 let result1 = sum(2, 3)
 let result2 = sum(7, -1);
 let result3 = sum(5, "hadi")
-let result4 = sum(sum(3, 4), 6 + 7);// sum(7, 6 + 7)
-                                    // sum(7, 13)
-                                    // 2
+let result4 = sum(sum(3, 4), 6 + 7);
+// sum(7, 6 + 7)
+// sum(7, 13)
+// 2
