@@ -1,6 +1,6 @@
 // setTimeout
 // setInterval
-// Event Queue (Event Queue + Call Stack = Event Loop)
+// Task(کار) Queue (Task Queue + Call Stack = Event Loop)
 // Promise
 
 let seconds = 0;
@@ -117,9 +117,18 @@ setTimeout(() => {
     console.log('TIMEOUT RAN')
 }, 100)
 
+// async
 myPromise.then(
     () => {
         console.log('Promise Resolved')
     }
 )
+
+myPromise.catch(
+    (reason) => {
+        
+    }
+)
+
+console.log('ewohfwf')
 
