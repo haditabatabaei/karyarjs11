@@ -50,16 +50,6 @@ console.dir(document)
 document.body // body Element
 
 
-
-
-
-
-
-
-
-
-
-
 // let result = document.getElementById('container')
 // console.log(result)
 // console.dir(result)
