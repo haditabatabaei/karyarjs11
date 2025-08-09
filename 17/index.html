@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="./index.js" defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .square {
+            width: 120px;
+            height: 120px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 40px;
+            width: 300px;
+            overflow-y: auto;
+            padding: 40px 0px 0px 40px;
+        }
+
+        input[name=register-first-name]:invalid {
+            border: 4px solid red;
+        }
+
+        .form-errors {
+            color: red;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <section id="container" class="container">
+        <!-- <a id="google" href="http://www.google.com" target="_blank">Go to google</a> -->
+        <!-- Form Validation - اعتبار سنجی -->
+        <!-- Event: Submit -->
+        <form name="register" novalidate>
+            <label for="register-input-id">
+                First Name:
+            </label>
+            <input
+                id="register-input-id" 
+                name="firstName" 
+                type="text"
+            >
+            <p id="firstNameError"></p>
+            <br />
+            <label for="city-id">City:</label>
+            <select id="city-id" name="city" multiple>
+                <option value="qom">Qom</option>
+                <option value="tehran">Tehran</option>
+                <option value="tabriz">Tabriz</option>
+                <option value="ardebil">Ardebil</option>
+                <option value="zanjan">Zanjan</option>
+                <option value="sirjan">Sirjan</option>
+                <option value="sari">Sari</option>
+                <option value="mashhad">Mashhad</option>
+            </select>
+
+            <br>
+            <label>
+                Email
+                <input type="email" name="email" required="required"></input>
+            </label>
+            <br />
+            <label>
+                Javascript
+                <input type="checkbox" value="js" name="skills"></input>
+            </label>
+            <label>
+                Typescript
+                <input type="checkbox" value="ts" name="skills"></input>
+            </label>
+            <label>
+                React
+                <input type="checkbox" value="react" name="skills"></input>
+            </label>
+             <label>
+                Male
+                <input type="radio" value="m" name="gender"></input>
+            </label>
+            <label>
+                Female
+                <input type="radio" value="f" name="gender"></input>
+            </label>
+            <br />
+            <ul id="form-errors" class="form-errors">
+
+            </ul>
+            <button id="submit-button">Submit</button>
+            <!-- <button>Button without type</button>
+            <br />
+            <button type="button">Button type="button"</button>
+            <br />
+            <button type="submit">Button type="submit"</button>
+            <br />
+            <button type="reset">Button type="reset"</button> -->
+        </form>
+
+        <!-- <button form="register" type="submit">Submit register form</button> -->
+    </section>
+</body>
+</html>
