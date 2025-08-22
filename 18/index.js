@@ -135,7 +135,7 @@ let filters = {
 // fetch, xhr
 // JSON (یک قالب استرینگ است.)
 // 
-// Javascript Object Notation
+// JavaScript Object Notation
 
 let strData = "{\"name\": \"hadi\", \"skills\": [\"js\"] }"
 
