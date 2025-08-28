@@ -305,15 +305,29 @@ let registerForm = {
 //         console.log(error.message)
 //     })
 
-// http('https://httpbin.io/html/schema', { method: 'GET' })
-//     .then((response) => {
-//         console.log(response)
-//         document.body.innerHTML = response.data
-//     })
-//     .catch(error => {
-//         console.log(error.status)
-//         console.log(error.message)
-//     })
+let cache = {} // 'https://httpbin.io/html/schema': response
+
+function withCacheSchema() {
+    const url = 'https://httpbin.io/html/schema'
+    const cachedResult = cache[url];
+
+    if(cachedResult && !cachedResult.expires) {
+        document.body.innerHTML = cachedResult.data
+    } else {
+        http('https://httpbin.io/html/schema', { method: 'GET' })
+            .then((response) => {
+                cache[url] = response;
+                console.log(response)
+                document.body.innerHTML = response.data
+            })
+            .catch(error => {
+                console.log(error.status)
+                console.log(error.message)
+            })
+}
+}
+
+
 
 // // arbitrary - دلخواه
 // // URL Parameters
